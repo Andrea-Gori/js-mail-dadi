@@ -15,7 +15,9 @@ for (var i = 0; i < emailList.length; i++) {
 }
 
 if (check) {
+  document.getElementById('green').innerHTML = 'Accesso consentito'
   console.log('Accesso consentito');
 } else {
+  document.getElementById('red').innerHTML = 'Accesso negato'
   console.log('Accesso negato');
 }
