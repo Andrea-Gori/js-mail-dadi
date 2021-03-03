@@ -21,3 +21,26 @@ if (check) {
   document.getElementById('red').innerHTML = 'Accesso negato'
   console.log('Accesso negato');
 }
+
+
+// DADI
+
+var min = 1 ;
+
+var max = 6 ;
+
+var giocatore = Math.floor(Math.random() * (max - min +1)) + min;
+
+var cpu = Math.floor(Math.random() * (max - min +1)) + min;
+
+console.log(giocatore , cpu);
+
+var risultatoDOM = document.getElementById('risultato-estrazione')
+
+if (cpu > giocatore) {
+  risultatoDOM.innerHTML = 'Banco vince'
+} else if (giocatore > cpu) {
+  risultatoDOM.innerHTML = 'Giocatore vince'
+} else {
+  risultatoDOM.innerHTML = 'Pareggio'
+}
